@@ -1,6 +1,5 @@
 package practice;
 
-import java.util.Optional;
 import java.util.function.Predicate;
 import model.Candidate;
 
