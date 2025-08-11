@@ -1,5 +1,6 @@
 package practice;
 
+import java.util.Optional;
 import java.util.function.Predicate;
 import model.Candidate;
 
@@ -18,7 +19,9 @@ public class CandidateValidator implements Predicate<Candidate> {
     }
 
     private int getYearsInUkr(String period) {
-        String[] data = period.split("-");
-        return Integer.parseInt(data[1]) - Integer.parseInt(data[0]);
+        String[] years = period.split("-");
+        Integer yearFrom = Integer.parseInt(years[0]);
+        Integer yearTo = Integer.parseInt(years[1]);
+        return yearTo - yearFrom;
     }
 }
